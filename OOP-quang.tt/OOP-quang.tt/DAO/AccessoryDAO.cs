@@ -11,34 +11,12 @@ namespace OOP_quang.tt.DAO
 		public AccessoryDAO() : base()
 		{
 		}
-
-		public override void Insert(Accessory row)
-		{
-			database.InsertTable("accessory", row);
-		}
-
-		
-		public override void Update(Accessory row)
-		{
-			database.UpdateTable("accessory", row);
-		}
-
-		public override void Delete(Accessory row)
-		{
-			database.deleteTable("accessory", row);
-		}
-
-		public void Truncate()
-		{
-			database.TruncateTable("accessory");
-		}
-
 		public void InitDatabase()
 		{
 			Console.WriteLine("Initializing accessory table with 10 records...");
 			for (int i = 1; i <= 10; i++)
 			{
-				Insert(new Accessory(i, $"Accessory {i}"));
+				Insert("accessory", new Accessory(i, $"Accessory {i}"));
 			}
 		}
 

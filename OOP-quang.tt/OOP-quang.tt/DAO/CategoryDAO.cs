@@ -10,38 +10,10 @@ namespace OOP_quang.tt.DAO
 		{
 		}
 
-		public override void Insert(Category row)
+		public void SelectAll()
 		{
-			 database.InsertTable("category", row);
+			database.Select("category");
 		}
-
-
-		public override void Update(Category row)
-		{
-			database.UpdateTable("category", row);
-		}
-
-		public override void Delete(Category row)
-		{
-			database.deleteTable("category", row);
-		}
-
-		public override List<Category> FindAll()
-		{
-			List<Category> categories = new List<Category>();
-
-			foreach (var item in database.categoryTable)
-			{
-				if (item != null)
-				{
-					categories.Add(item);
-				}
-			}
-
-			return categories;
-		}
-
-
 		public override Category FindById(int id)
 		{
 			foreach (var item in database.categoryTable)

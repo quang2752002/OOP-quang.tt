@@ -8,9 +8,10 @@ namespace OOP_quang.tt.DAO
 {
     public interface IDao<T>
 	{
-		void Insert(T row);
-		void Update(T row);
-		void Delete(T row);
+		void Insert(string name,T row);
+		void Update(string name, T row);
+		void Delete(string name, T row);
+		void Truncate(string name);
 		List<T> FindAll();
 		T FindById(int id);
 	}

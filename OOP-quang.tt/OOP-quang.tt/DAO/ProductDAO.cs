@@ -10,23 +10,8 @@ namespace OOP_quang.tt.DAO
 	{
 		public ProductDAO() : base()
 		{
+
 		}
-
-		public void Insert(Product row)
-        {
-            database.InsertTable("product", row);
-        }
-
-        public override void Update(Product row)
-        {
-            database.UpdateTable("product", row);
-        }
-
-        public override void Delete(Product row)
-        {
-            database.deleteTable("product", row);
-        }
-
         public void SelectAll()
         {
             database.Select("product");

@@ -13,15 +13,15 @@ namespace dao
 			CategoryDAO categoryDAO = new CategoryDAO();
 
 			Category category1 = new Category(1, "Category A");
-			categoryDAO.Insert(category1);
+			categoryDAO.Insert("category", category1);
 	
 			Category category2 = new Category(2, "Category B");
-			categoryDAO.Insert(category2);			
+			categoryDAO.Insert("category", category2);			
 		}
 
 		public static void Main(string[] args)
 		{
-			//TestInsertCategory();
+			TestInsertCategory();
 
 
 			DatabaseDemo demo = new DatabaseDemo();
@@ -67,6 +67,31 @@ namespace dao
 			Console.WriteLine("\ndelete test:");
 			productDaoDemo.DeleteTest();
 			productDaoDemo.SelectAllTest();
+
+			CategoryDaoDemo categoryDaoDemo = new CategoryDaoDemo();
+			categoryDaoDemo.InsertTest();
+			categoryDaoDemo.FindAllTest();
+			Console.WriteLine("\nupdate test:");
+			categoryDaoDemo.UpdateTest();
+			categoryDaoDemo.FindAllTest();
+
+			Console.WriteLine("\ndelete test:");
+			categoryDaoDemo.DeleteTest();
+			categoryDaoDemo.FindAllTest();
+
+			AccessoryDaoDemo accessoryDaoDemo = new AccessoryDaoDemo();
+			Console.WriteLine("insert test:");
+			accessoryDaoDemo.InsertTest();
+			accessoryDaoDemo.SelectAllTest();
+
+			Console.WriteLine("\nupdate test:");
+			accessoryDaoDemo.UpdateTest();
+			accessoryDaoDemo.SelectAllTest();
+
+			Console.WriteLine("\ndelete test:");
+			accessoryDaoDemo.DeleteTest();
+			accessoryDaoDemo.SelectAllTest();
+
 		}
 
 
