@@ -16,8 +16,7 @@ namespace dao
 			categoryDAO.Insert(category1);
 	
 			Category category2 = new Category(2, "Category B");
-			categoryDAO.Insert(category2);
-			
+			categoryDAO.Insert(category2);			
 		}
 
 		public static void Main(string[] args)

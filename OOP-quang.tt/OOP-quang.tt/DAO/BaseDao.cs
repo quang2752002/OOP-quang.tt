@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace OOP_quang.tt.DAO
 {
-	public abstract class BaseDao<T>
+	public abstract class BaseDao<T>:IDao<T>
 	{
 		protected Database database;
 
@@ -13,31 +13,19 @@ namespace OOP_quang.tt.DAO
 			database = new Database();
 		}
 
-		public virtual void Insert(T row)
-		{
-			Console.WriteLine("Insert method not implemented in BaseDao.");
-			
-		}
+		public virtual void Insert(T row){	}
 
-		public virtual void Update(T row)
-		{
-			Console.WriteLine("Update method not implemented in BaseDao.");
-		}
+		public virtual void Update(T row){  }
 
-		public virtual void Delete(T row)
-		{
-			Console.WriteLine("Delete method not implemented in BaseDao.");
-		}
+		public virtual void Delete(T row){ }
 
 		public virtual List<T> FindAll()
-		{
-			Console.WriteLine("FindAll method not implemented in BaseDao.");
+		{	
 			return null;
 		}
 
 		public virtual T FindById(int id)
-		{
-			Console.WriteLine("FindById method not implemented in BaseDao.");
+		{	
 			return default(T);
 		}
 	}
