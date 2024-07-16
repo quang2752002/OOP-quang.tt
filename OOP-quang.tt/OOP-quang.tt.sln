@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-quang.tt", "OOP-quang.tt\OOP-quang.tt.csproj", "{D176FF1D-6473-4402-A19C-646D3AB0BEAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D176FF1D-6473-4402-A19C-646D3AB0BEAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D176FF1D-6473-4402-A19C-646D3AB0BEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D176FF1D-6473-4402-A19C-646D3AB0BEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D176FF1D-6473-4402-A19C-646D3AB0BEAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54D6BC6D-96E3-4C6A-ACDB-0ED1AFF2399E}
+	EndGlobalSection
+EndGlobal
