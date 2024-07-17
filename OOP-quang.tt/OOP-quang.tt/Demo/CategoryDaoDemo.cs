@@ -12,6 +12,7 @@ namespace OOP_quang.tt.Demo
 	{
 		
 		private CategoryDAO categoryDAO;
+		private const string category = "category";
 
 		public CategoryDaoDemo()
 		{
@@ -19,30 +20,30 @@ namespace OOP_quang.tt.Demo
 			categoryDAO = new CategoryDAO();
 		}
 
-		public void InsertTest()
+		public void InsertTest()// thêm mới dữ liệu vào bảng category
 		{
 			Console.WriteLine("Inserting categories...");
-			categoryDAO.Insert("category", new Category(1, "Category 1"));
-			categoryDAO.Insert("category", new Category(2, "Category 2"));
-			categoryDAO.Insert("category", new Category(3, "Category 3"));
+			categoryDAO.Insert(category, new Category(1, "Category 1"));
+			categoryDAO.Insert(category, new Category(2, "Category 2"));
+			categoryDAO.Insert(category, new Category(3, "Category 3"));
 		}
 
-		public void FindAllTest()
+		public void FindAllTest()//lấy dữ liệu test trong bảng category
 		{
 			Console.WriteLine("All categories...");
-			categoryDAO.SelectAll();
+			categoryDAO.SelectAll(category);
 		}
 
-		public void UpdateTest()
+		public void UpdateTest()// cập nhật dữ liệu test trong bảng category
 		{
 			Console.WriteLine("Update category...");
-			categoryDAO.Update("category", new Category(2, "Updated Category 2"));
+			categoryDAO.Update(category, new Category(2, "Updated Category 2"));
 		}
 
-		public void DeleteTest()
+		public void DeleteTest()//xóa dữ liệu test trong bảng category
 		{
 			Console.WriteLine("Deleting category...");
-			categoryDAO.Delete("category", new Category(3, "Category 3"));
+			categoryDAO.Delete(category, new Category(3, "Category 3"));
 		}
 	}
 }

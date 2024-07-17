@@ -12,7 +12,7 @@ namespace OOP_quang.tt.DAO
 		{
 			database = new Database();
 		}
-		public virtual void Insert(string name, T row)
+		public virtual void Insert(string name, T row)// 
 		{
 			database.InsertTable(name, row);
 		}
@@ -30,9 +30,9 @@ namespace OOP_quang.tt.DAO
 			database.TruncateTable(name);
 		}
 
-		public virtual List<T> FindAll()
+		public void SelectAll(string name)//lấy dữ liệu trong bảng product
 		{
-			return null;
+			database.Select(name);
 		}
 
 		public virtual T FindById(int id)

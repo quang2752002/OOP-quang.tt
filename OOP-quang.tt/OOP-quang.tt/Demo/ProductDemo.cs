@@ -23,7 +23,7 @@ namespace OOP_quang.tt.Demo
 			PrintProduct(product2);
 		}
 
-		public void PrintProduct(Product product)
+		public void PrintProduct(Product product)//in thông tin product
 		{
 			Console.WriteLine($"Product ID: {product.id}");
 			Console.WriteLine($"Name: {product.name}");

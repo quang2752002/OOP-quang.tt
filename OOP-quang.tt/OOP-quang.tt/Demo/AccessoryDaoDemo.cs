@@ -11,36 +11,37 @@ namespace OOP_quang.tt.Demo
 	public class AccessoryDaoDemo
 	{
 		private AccessoryDAO accessoryDAO;
+		private const string accessory = "accessory";
 		public AccessoryDaoDemo()
 		{
 
 			accessoryDAO = new AccessoryDAO();
 		}
 
-		public void InsertTest()
+		public void InsertTest()// thêm dữ liệu vào bảng accessory
 		{
 			Console.WriteLine("Inserting products...");
-			accessoryDAO.Insert("accessory", new Accessory(1, "Product 1"));
-			accessoryDAO.Insert("accessory", new Accessory(2, "Product 2"));
-			accessoryDAO.Insert("accessory", new Accessory(3, "Product 3"));
+			accessoryDAO.Insert(accessory, new Accessory(1, "Product 1"));
+			accessoryDAO.Insert(accessory, new Accessory(2, "Product 2"));
+			accessoryDAO.Insert(accessory, new Accessory(3, "Product 3"));
 		}
 
-		public void UpdateTest()
+		public void UpdateTest()// cập nhật dữ liệu trong bảng accessory
 		{
 			Console.WriteLine("Updating Accessory...");
-			accessoryDAO.Update("accessory", new Accessory(2, "Updated Accessory 2"));
+			accessoryDAO.Update(accessory, new Accessory(2, "Updated Accessory 2"));
 		}
 
-		public void DeleteTest()
+		public void DeleteTest() // xóa dữ liệu trong bảng accessory
 		{
 			Console.WriteLine("Deleting Accessory...");
-			accessoryDAO.Delete("accessory", new Accessory(3, "Product 3"));
+			accessoryDAO.Delete(accessory, new Accessory(3, "Product 3"));
 		}
 
-		public void SelectAllTest()
+		public void SelectAllTest()// lấy dữ liệu trong bảng accessory
 		{
 			Console.WriteLine("Selecting all accessory...");
-			accessoryDAO.SelectAll();
+			accessoryDAO.SelectAll(accessory);
 		}
 	}
 }

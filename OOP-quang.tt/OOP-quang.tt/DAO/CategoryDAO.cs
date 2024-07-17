@@ -10,10 +10,7 @@ namespace OOP_quang.tt.DAO
 		{
 		}
 
-		public void SelectAll()
-		{
-			database.Select("category");
-		}
+		
 		public override Category FindById(int id)
 		{
 			foreach (var item in database.categoryTable)

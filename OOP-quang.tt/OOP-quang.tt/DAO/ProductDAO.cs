@@ -13,9 +13,6 @@ namespace OOP_quang.tt.DAO
 		{
 
 		}
-        public void SelectAll()
-        {
-            database.Select("product");
-        }
+        
     }
 }

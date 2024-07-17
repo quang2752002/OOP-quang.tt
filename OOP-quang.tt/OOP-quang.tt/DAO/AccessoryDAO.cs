@@ -9,27 +9,17 @@ namespace OOP_quang.tt.DAO
 {
     public class AccessoryDAO : BaseDao<Accessory>
 	{
+		private const string accessory = "accessory";
 		public AccessoryDAO() : base()
 		{
 		}
-		public void InitDatabase()
+		public void InitDatabase()// thêm dữ lệu vào database
 		{
 			Console.WriteLine("Initializing accessory table with 10 records...");
 			for (int i = 1; i <= 10; i++)
 			{
-				Insert("accessory", new Accessory(i, $"Accessory {i}"));
+				Insert(accessory, new Accessory(i, $"Accessory {i}"));
 			}
-		}
-
-		public void SelectAll()
-		{
-			database.Select("accessory");
-		}
-
-		public void PrintTable()
-		{
-			Console.WriteLine("Printing accessory table...");
-			SelectAll();
 		}
 	}
 }

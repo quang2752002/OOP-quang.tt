@@ -12,7 +12,7 @@ namespace OOP_quang.tt.DAO
 		void Update(string name, T row);
 		void Delete(string name, T row);
 		void Truncate(string name);
-		List<T> FindAll();
+		void SelectAll(string name);
 		T FindById(int id);
 	}
 }

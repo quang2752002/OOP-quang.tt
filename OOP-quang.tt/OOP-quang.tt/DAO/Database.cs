@@ -21,7 +21,7 @@ namespace OOP_quang.tt.DAO
 			this.accessoryTable = new Accessory[100];
 		}
 
-		public void InsertTable(string name, dynamic row)
+		public void InsertTable(string name, dynamic row)// thêm dữ liệu vào bảng
 		{
 			if (name == product)
 			{
@@ -40,7 +40,7 @@ namespace OOP_quang.tt.DAO
 				Console.WriteLine("Invalid table name.");
 			}
 		}
-		public void UpdateTable(string name, dynamic row)
+		public void UpdateTable(string name, dynamic row)// update lại row vào bảng
 		{
 
 			if (name == product)
@@ -81,7 +81,7 @@ namespace OOP_quang.tt.DAO
 				Console.WriteLine("Invalid table name.");
 			}
 		}
-		public void UpdateTableById(int id, dynamic row)
+		public void UpdateTableById(int id, dynamic row)// update lại row theo id
 		{
 			if (row == null)
 			{
@@ -129,7 +129,7 @@ namespace OOP_quang.tt.DAO
 				Console.WriteLine($"ID {id} not found in any table.");
 			}
 		}
-		public void TruncateTable(string name)
+		public void TruncateTable(string name)//xóa toàn bộ dữ liệu trong bảng
 		{
 			if (name == product)
 			{
@@ -151,7 +151,7 @@ namespace OOP_quang.tt.DAO
 				Console.WriteLine("Invalid table name.");
 			}
 		}
-		public void deleteTable(string name,dynamic row)
+		public void deleteTable(string name,dynamic row)//xóa row trong bảng
 		{
 			if (row == null || row.id == null)
 			{
@@ -201,7 +201,7 @@ namespace OOP_quang.tt.DAO
 			}
 		}
 
-		public void Select(string name)
+		public void Select(string name)// lấy dữ liệu trong bảng
 		{
 			if (name == product)
 			{

@@ -11,75 +11,73 @@ namespace OOP_quang.tt.Demo
     public class DatabaseDemo
 	{
 		private Database database;
-
+		private const string product = "product";
+		private const string category = "category";
+		private const string accessory = "accessory";
 		public DatabaseDemo()
 		{
 			database = new Database();
 		}
 
-		public void InsertTableTest()
+		public void InsertTableTest()// thêm dữ liệu vào database
 		{
 			for (int i = 1; i <= 10; i++)
 			{
-				database.InsertTable("product", new Product ( i, "Product "+1 ,1));
-				database.InsertTable("category", new Category (  i,  "Category " + i ));
-				database.InsertTable("accessory", new Accessory (i,  "Accessory " + i ));
+				database.InsertTable(product, new Product ( i, "Product "+1 ,1));
+				database.InsertTable(category, new Category (  i,  "Category " + i ));
+				database.InsertTable(accessory, new Accessory (i,  "Accessory " + i ));
 			}
 		}
 
-		public void SelectTableTest()
+		public void SelectTableTest()//lấy dữ liệu từ database
 		{
 			Console.WriteLine("Products:");
-			database.Select("product");
+			database.Select(product);
 			Console.WriteLine("Categories:");
-			database.Select("category");
+			database.Select(category);
 			Console.WriteLine("Accessories:");
-			database.Select("accessory");
+			database.Select(accessory);
 		}
 
-		public void UpdateTableTest()
+		public void UpdateTableTest()//update lại dữ liệu
 		{
-			database.UpdateTable("product", new Product(1, "Updated Product " + 1, 1));
-			database.UpdateTable("category", new Category(1, "Updated Category " + 1));
-			database.UpdateTable("accessory", new Accessory(1, "Updated Accessory " + 1));
+			database.UpdateTable(product, new Product(1, "Updated Product " + 1, 1));
+			database.UpdateTable(category, new Category(1, "Updated Category " + 1));
+			database.UpdateTable(accessory, new Accessory(1, "Updated Accessory " + 1));
 		}
 
-		public void DeleteTableTest()
+		public void DeleteTableTest()//xóa 1 row của các bảng trong database
 		{
-			database.deleteTable("product", new Product(1, " Product " + 1, 1));
-			database.deleteTable("category", new Category(1, " Category " + 1));
-			database.deleteTable("accessory", new Accessory(1, " Accessory " + 1));
+			database.deleteTable(product, new Product(1, " Product " + 1, 1));
+			database.deleteTable(category, new Category(1, " Category " + 1));
+			database.deleteTable(accessory, new Accessory(1, " Accessory " + 1));
 		}
 
-		public void TruncateTableTest()
+		public void TruncateTableTest()// xóa toàn bộ database
 		{
-			database.productTable = new Product[100];
-			database.categoryTable = new Category[100];
-			database.accessoryTable = new Accessory[100];
+			
+			database.TruncateTable(product);
+			database.TruncateTable(category);
+			database.TruncateTable(accessory);
 			Console.WriteLine("All tables truncated.");
 		}
 
-		public void InitDatabase()
+		public void InitDatabase()// thêm dữ liệu test vào database
 		{
 			for (int i = 1; i <= 10; i++)
 			{
-				database.InsertTable("product", new Product(i, "Product " + 1, 1));
-				database.InsertTable("category", new Category(i, "Category " + i));
-				database.InsertTable("accessory", new Accessory(i, "Accessory " + i));
+				database.InsertTable(product, new Product(i, "Product " + 1, 1));
+				database.InsertTable(category, new Category(i, "Category " + i));
+				database.InsertTable(accessory, new Accessory(i, "Accessory " + i));
 			}
 		}
 
-		public void PrintTableTest(string name)
+		public void PrintTableTest(string name)// in dữ liệu trong bảng
 		{
 			database.Select(name);
 		}
 
 		
 	}
-
-	
-
-	
-
 	
 }
