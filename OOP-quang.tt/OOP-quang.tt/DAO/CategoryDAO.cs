@@ -1,10 +1,10 @@
-﻿using OOP_quang.tt;
+﻿using OOP_quang.tt.Entity;
 using System;
 using System.Collections.Generic;
 
 namespace OOP_quang.tt.DAO
 {
-	public class CategoryDAO : BaseDao<Category>
+    public class CategoryDAO : BaseDao<Category>
 	{
 		public CategoryDAO() : base()
 		{

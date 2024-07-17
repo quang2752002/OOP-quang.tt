@@ -1,4 +1,5 @@
 ﻿using OOP_quang.tt.DAO;
+using OOP_quang.tt.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OOP_quang.tt.Demo
 {
-	public class DatabaseDemo
+    public class DatabaseDemo
 	{
 		private Database database;
 

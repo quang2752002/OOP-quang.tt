@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_quang.tt
+namespace OOP_quang.tt.Entity
 {
-	public interface IEnity
-	{
-		void PrintRow();
-	}
+    public interface IEnity
+    {
+        void PrintRow();
+    }
 }

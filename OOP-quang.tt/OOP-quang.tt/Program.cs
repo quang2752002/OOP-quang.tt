@@ -1,12 +1,12 @@
 ﻿
 using OOP_quang.tt.DAO;
-using OOP_quang.tt;
 using OOP_quang.tt.Demo;
 using System;
+using OOP_quang.tt.Entity;
 
 namespace dao
 {
-	class Program
+    class Program
 	{
 		public static void TestInsertCategory()
 		{

@@ -1,16 +1,19 @@
-﻿using OOP_quang.tt;
+﻿using OOP_quang.tt.Entity;
 using System;
 using System.Reflection.Emit;
 
 namespace OOP_quang.tt.DAO
 {
-	public class Database
+    public class Database
 	{
 		public Product[] productTable;
 		public Category[] categoryTable;
 		public Accessory[] accessoryTable;
 		public Database instants;
 
+		private const string product = "product";
+		private const string category = "category";
+		private const string accessory = "accessory";
 		public Database()
 		{
 			this.productTable = new Product[100];
@@ -20,15 +23,15 @@ namespace OOP_quang.tt.DAO
 
 		public void InsertTable(string name, dynamic row)
 		{
-			if (name == "product")
+			if (name == product)
 			{
 				AddToTable(productTable, row);
 			}
-			else if (name == "category")
+			else if (name == category)
 			{
 				AddToTable(categoryTable, row);
 			}
-			else if (name == "accessory")
+			else if (name == accessory)
 			{
 				AddToTable(accessoryTable, row);
 			}
@@ -40,7 +43,7 @@ namespace OOP_quang.tt.DAO
 		public void UpdateTable(string name, dynamic row)
 		{
 
-			if (name == "product")
+			if (name == product)
 			{
 				for (int i = 0; i < productTable.Length; i++)
 				{
@@ -51,7 +54,7 @@ namespace OOP_quang.tt.DAO
 					}
 				}		
 			}
-			else if (name == "category")
+			else if (name == category)
 			{
 				for (int i = 0; i < categoryTable.Length; i++)
 				{
@@ -62,7 +65,7 @@ namespace OOP_quang.tt.DAO
 					}					
 				}		
 			}
-			else if (name == "accessory")
+			else if (name ==accessory)
 			{
 				for (int i = 0; i < accessoryTable.Length; i++)
 				{
@@ -128,17 +131,17 @@ namespace OOP_quang.tt.DAO
 		}
 		public void TruncateTable(string name)
 		{
-			if (name == "product")
+			if (name == product)
 			{
 				productTable = new Product[100];
 				Console.WriteLine("Product table truncated.");
 			}
-			else if (name == "category")
+			else if (name == category)
 			{
 				categoryTable = new Category[100];
 				Console.WriteLine("Category table truncated.");
 			}
-			else if (name == "accessory")
+			else if (name == accessory)
 			{
 				accessoryTable = new Accessory[100];
 				Console.WriteLine("Accessory table truncated.");
@@ -156,7 +159,7 @@ namespace OOP_quang.tt.DAO
 				return;
 			}
 
-			if (name == "product")
+			if (name ==product)
 			{
 				for (int i = 0; i < productTable.Length; i++)
 				{
@@ -168,7 +171,7 @@ namespace OOP_quang.tt.DAO
 					}
 				}
 			}
-			else if (name == "category")
+			else if (name == category)
 			{
 				for (int i = 0; i < categoryTable.Length; i++)
 				{
@@ -180,7 +183,7 @@ namespace OOP_quang.tt.DAO
 					}
 				}
 			}
-			else if (name == "accessory")
+			else if (name == accessory)
 			{
 				for (int i = 0; i < accessoryTable.Length; i++)
 				{
@@ -200,15 +203,15 @@ namespace OOP_quang.tt.DAO
 
 		public void Select(string name)
 		{
-			if (name == "product")
+			if (name == product)
 			{
 				SelectAllFromTable(productTable);
 			}
-			else if (name == "category")
+			else if (name == category)
 			{
 				SelectAllFromTable(categoryTable);
 			}
-			else if (name == "accessory")
+			else if (name == accessory)
 			{
 				SelectAllFromTable(accessoryTable);
 			}

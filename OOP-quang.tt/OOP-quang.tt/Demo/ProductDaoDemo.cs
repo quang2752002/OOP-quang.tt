@@ -1,4 +1,5 @@
 ﻿using OOP_quang.tt.DAO;
+using OOP_quang.tt.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

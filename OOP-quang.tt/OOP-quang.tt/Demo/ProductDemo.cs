@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOP_quang.tt.Entity;
 
 namespace OOP_quang.tt.Demo
 {
-	public class ProductDemo
+    public class ProductDemo
 	{
 		public void CreateProductTest()
 		{

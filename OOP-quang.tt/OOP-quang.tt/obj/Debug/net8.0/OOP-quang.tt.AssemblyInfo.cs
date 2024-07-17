@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OOP-quang.tt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b43215d07b62f75c62979f02cee9b314ea5931d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+733fe52c600590d7436b603bc11281f628d6664b")]
 [assembly: System.Reflection.AssemblyProductAttribute("OOP-quang.tt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OOP-quang.tt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
