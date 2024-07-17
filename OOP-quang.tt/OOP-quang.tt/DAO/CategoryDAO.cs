@@ -11,7 +11,7 @@ namespace OOP_quang.tt.DAO
 		}
 
 		
-		public override Category FindById(int id)
+		public override Category FindById(int id)// tìm Category theo id
 		{
 			foreach (var item in database.categoryTable)
 			{
